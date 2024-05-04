@@ -1,5 +1,6 @@
-package salaoDataOutput;
+package salaoDataOutput.mapDB;
 
+import salaoDataOutput.ClienteDB;
 import salaoDataProcess.modeloDeDados.Cliente;
 
 import java.util.HashMap;

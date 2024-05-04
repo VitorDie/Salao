@@ -1,11 +1,12 @@
-package salaoDataOutput;
+package salaoDataOutput.mapDB;
 
+import salaoDataOutput.ProfissionalDB;
 import salaoDataProcess.modeloDeDados.Profissional;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ProfissionalMapDB implements ProfissionalDB{
+public class ProfissionalMapDB implements ProfissionalDB {
     Map<Integer, Profissional> db = new HashMap<Integer, Profissional>();
 
     @Override

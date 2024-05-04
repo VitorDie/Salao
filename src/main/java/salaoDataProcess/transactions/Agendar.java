@@ -1,7 +1,7 @@
 package salaoDataProcess.transactions;
 
 import salaoDataOutput.ComandaDB;
-import salaoDataOutput.ComandaMapDB;
+import salaoDataOutput.mapDB.ComandaMapDB;
 import salaoDataProcess.modeloDeDados.Atendimentos;
 import salaoDataProcess.modeloDeDados.Cliente;
 import salaoDataProcess.modeloDeDados.Comanda;

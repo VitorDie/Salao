@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 import salaoDataOutput.ClienteDB;
-import salaoDataOutput.ClienteMapDB;
+import salaoDataOutput.mapDB.ClienteMapDB;
 import salaoDataProcess.modeloDeDados.Cliente;
 import salaoDataProcess.transactions.clienteTransactions.ClienteTransaction;
 import salaoDataProcess.transactions.clienteTransactions.ClienteTransactionFactory;

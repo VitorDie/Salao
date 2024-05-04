@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 import salaoDataOutput.ProfissionalDB;
-import salaoDataOutput.ProfissionalMapDB;
+import salaoDataOutput.mapDB.ProfissionalMapDB;
 import salaoDataProcess.modeloDeDados.Profissional;
 import salaoDataProcess.transactions.profissionalTransactions.ProfissionalTransaction;
 import salaoDataProcess.transactions.profissionalTransactions.ProfissionalTransactionFactory;
