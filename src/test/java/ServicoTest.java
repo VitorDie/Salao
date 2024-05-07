@@ -9,10 +9,9 @@ import salaoDataProcess.transactions.servicoTransactions.CriarProgressiva;
 import salaoDataOutput.SalaoDBFactory;
 
 public class ServicoTest {
-    SalaoMapDBFactory dbFactory = SalaoDBFactory.makeSalaoMapDBFactory();
+    SalaoDBFactory dbFactory = new SalaoMapDBFactory();
     ServicoDB database = dbFactory.makeServicoDB();
 
-    ServicoDB database = new ServicoMapDB();
     @Test
     public void criarServicoTest(){
         Integer servicoId = 1;
