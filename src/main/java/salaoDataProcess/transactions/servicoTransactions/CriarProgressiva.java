@@ -5,18 +5,14 @@ import salaoDataProcess.modeloDeDados.Progressiva;
 import salaoDataProcess.modeloDeDados.Servico;
 
 public class CriarProgressiva extends CriarServico {
-    private final Integer id;
-    private final Double valor;
 
     public CriarProgressiva(Integer id, Double valor, ServicoDB database) {
-        super(database);
-        this.id = id;
-        this.valor = valor;
+        super(id, Progressiva.nomePadrao(), valor, database);
     }
 
     @Override
     public void execute() {
-        Servico servico = new Progressiva(valor);
-        database.create(id, servico);
+        Servico servico = new Progressiva(super.valor);
+        database.create(super.id, servico);
     }
 }

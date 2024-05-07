@@ -1,8 +1,8 @@
 package salaoDataProcess.modeloDeDados;
 
-public abstract class Servico {
+public class Servico {
     protected Double valor;
-    protected String nome;
+    protected java.lang.String nome;
 
     public Double getValor() {
         return valor;
@@ -12,7 +12,12 @@ public abstract class Servico {
         this.valor = valor;
     }
 
-    public String getNome() {
+    public Servico(String nome, Double valor) {
+        this.valor = valor;
+        this.nome = nome;
+    }
+
+    public java.lang.String getNome() {
         return nome;
     }
 

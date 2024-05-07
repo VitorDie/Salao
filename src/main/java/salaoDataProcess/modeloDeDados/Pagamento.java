@@ -1,9 +1,9 @@
 package salaoDataProcess.modeloDeDados;
 
-public class String {
+public class Pagamento {
     private java.lang.String formaDePagamento;
 
-    public String(java.lang.String formaDePagamento) {
+    public Pagamento(java.lang.String formaDePagamento) {
         this.formaDePagamento = formaDePagamento;
     }
 

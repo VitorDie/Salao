@@ -1,12 +1,13 @@
 package salaoDataProcess.modeloDeDados;
 
 public class Progressiva extends Servico{
+
     public Progressiva(Double valor) {
-        super.valor = valor;
+        super(nomePadrao(), valor);
     }
 
-    @Override
-    public java.lang.String toString() {
-        return "Progressiva";
+    public static String nomePadrao() {
+        return "progressiva";
     }
+
 }
