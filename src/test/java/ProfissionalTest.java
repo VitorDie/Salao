@@ -1,16 +1,17 @@
 import org.junit.Assert;
 import org.junit.Test;
 import salaoDataOutput.ProfissionalDB;
+import salaoDataOutput.SalaoDBFactory;
 import salaoDataOutput.mapDB.ProfissionalMapDB;
+import salaoDataOutput.mapDB.SalaoMapDBFactory;
 import salaoDataProcess.modeloDeDados.Profissional;
 import salaoDataProcess.transactions.profissionalTransactions.ProfissionalTransaction;
 import salaoDataProcess.transactions.profissionalTransactions.ProfissionalTransactionFactory;
 
 
 public class ProfissionalTest {
-    // TO-DO, COLOCAR COMO SINGLETON
-    // TO-DO Implementar NullObject nas DBs
-    ProfissionalDB database = new ProfissionalMapDB();
+    SalaoDBFactory dbFactory = new SalaoMapDBFactory();
+    ProfissionalDB database = dbFactory.makeProfissionalDB();
 
     @Test
     public void adicionarProfissionalTest() {

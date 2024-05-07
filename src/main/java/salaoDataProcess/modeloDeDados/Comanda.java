@@ -5,10 +5,10 @@ import java.time.LocalDateTime;
 public class Comanda {
     private LocalDateTime data;
     private Cliente cliente;
-    private Pagamento pagamento;
+    private String pagamento;
     private Atendimentos atendimentos;
 
-    public Comanda(LocalDateTime data, Cliente cliente, Pagamento pagamento, Atendimentos atendimentos) {
+    public Comanda(LocalDateTime data, Cliente cliente, String pagamento, Atendimentos atendimentos) {
         this.data = data;
         this.cliente = cliente;
         this.pagamento = pagamento;
@@ -23,7 +23,7 @@ public class Comanda {
         return cliente;
     }
 
-    public Pagamento getPagamento() {
+    public String getPagamento() {
         return pagamento;
     }
 

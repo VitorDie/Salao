@@ -1,13 +1,16 @@
 import org.junit.Assert;
 import org.junit.Test;
 import salaoDataOutput.ClienteDB;
+import salaoDataOutput.SalaoDBFactory;
 import salaoDataOutput.mapDB.ClienteMapDB;
+import salaoDataOutput.mapDB.SalaoMapDBFactory;
 import salaoDataProcess.modeloDeDados.Cliente;
 import salaoDataProcess.transactions.clienteTransactions.ClienteTransaction;
 import salaoDataProcess.transactions.clienteTransactions.ClienteTransactionFactory;
 
 public class ClienteTest {
-    ClienteDB database = new ClienteMapDB();
+    SalaoDBFactory dbFactory = new SalaoMapDBFactory();
+    ClienteDB database = dbFactory.makeClienteDB();
 
     @Test
     public void adicionarClienteTest() {

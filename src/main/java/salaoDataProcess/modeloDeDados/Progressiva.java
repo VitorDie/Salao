@@ -6,7 +6,7 @@ public class Progressiva extends Servico{
     }
 
     @Override
-    public String toString() {
+    public java.lang.String toString() {
         return "Progressiva";
     }
 }
