@@ -7,7 +7,7 @@ public class Progressiva extends Servico{
     }
 
     public static String nomePadrao() {
-        return "progressiva";
+        return "Progressiva";
     }
 
 }

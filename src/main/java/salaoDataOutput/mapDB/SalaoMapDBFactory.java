@@ -5,7 +5,7 @@ import salaoDataOutput.*;
 public class SalaoMapDBFactory implements SalaoDBFactory {
     @Override
     public AtendimentoDB makeAtendimentoDB() {
-        return null;
+        return new AtendimentoMapDB();
     }
 
     @Override

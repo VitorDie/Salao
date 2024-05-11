@@ -30,4 +30,20 @@ public class Comanda {
     public Atendimentos getAtendimentos() {
         return atendimentos;
     }
+
+    public void setData(LocalDateTime data) {
+        this.data = data;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setPagamento(String pagamento) {
+        this.pagamento = pagamento;
+    }
+
+    public void setAtendimentos(Atendimentos atendimentos) {
+        this.atendimentos = atendimentos;
+    }
 }
