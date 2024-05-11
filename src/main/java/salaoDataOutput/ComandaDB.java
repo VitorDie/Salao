@@ -3,6 +3,9 @@ package salaoDataOutput;
 import salaoDataProcess.modeloDeDados.Comanda;
 
 public interface ComandaDB {
-    public Comanda consultarComanda(Integer comandaId);
-    public void inserirComanda(Integer comandaId, Comanda comanda);
+    public void create(Integer id, Comanda comanda);
+    public Comanda read(Integer id);
+    public void update(Integer id, Comanda comanda);
+    public void delete(Integer id);
+
 }

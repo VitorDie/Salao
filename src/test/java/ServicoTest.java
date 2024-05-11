@@ -4,11 +4,8 @@ import salaoDataOutput.ServicoDB;
 import salaoDataOutput.mapDB.SalaoMapDBFactory;
 import salaoDataOutput.mapDB.ServicoMapDB;
 import salaoDataProcess.modeloDeDados.Servico;
-import salaoDataProcess.transactions.servicoTransactions.CriarServico;
-import salaoDataProcess.transactions.servicoTransactions.CriarProgressiva;
+import salaoDataProcess.transactions.servicoTransactions.*;
 import salaoDataOutput.SalaoDBFactory;
-import salaoDataProcess.transactions.servicoTransactions.ServicoTransaction;
-import salaoDataProcess.transactions.servicoTransactions.ServicoTransactionFactory;
 
 public class ServicoTest {
     SalaoDBFactory dbFactory = new SalaoMapDBFactory();
@@ -38,6 +35,52 @@ public class ServicoTest {
         Assert.assertEquals(servicoRecebido.getValor(), 2.0, .001);
         Assert.assertEquals(servicoRecebido.getNome(), "raspar a cabeca");
     }
+    @Test
+    public void excluirServicoTest(){
+        criarServicoTest();
+        Integer servicoId = 2;
 
+        ServicoTransaction excluirServico = ServicoTransactionFactory.makeExcluirServico(servicoId, database);
+        excluirServico.execute();
 
+        Servico servicoRecebido = database.read(servicoId);
+
+        Assert.assertNull(servicoRecebido);
+    }
+
+    @Test
+    public void alterarServicoNomeTest(){
+        criarServicoTest();
+
+        Integer servicoId = 2;
+        Servico servicoRecebido = database.read(servicoId);
+
+        Assert.assertEquals(servicoRecebido.getNome(), "raspar a cabeca");
+
+        String novoNome = "pintar o cabelo";
+        AlterarServico alterarServicoNome = ServicoTransactionFactory.makeAlterarServicoNome(servicoId, novoNome, database);
+        alterarServicoNome.execute();
+
+        servicoRecebido = database.read(servicoId);
+
+        Assert.assertEquals(servicoRecebido.getNome(), novoNome);
+    }
+
+    @Test
+    public void alterarServicoValorTest() {
+        criarServicoTest();
+        Integer servicoId = 2;
+        Double novoValor = 100.0;
+
+        Servico servicoRecebido = database.read(servicoId);
+
+        Assert.assertEquals(servicoRecebido.getValor(), 2.0, .001);
+
+        AlterarServico alterarServicoValor = ServicoTransactionFactory.makeAlterarServicoValor(servicoId, novoValor, database);
+        alterarServicoValor.execute();
+
+        servicoRecebido = database.read(servicoId);
+
+        Assert.assertEquals(servicoRecebido.getValor(), novoValor);
+    }
 }
