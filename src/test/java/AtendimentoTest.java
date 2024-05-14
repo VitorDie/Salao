@@ -22,10 +22,10 @@ import salaoDataProcess.transactions.servicoTransactions.ServicoTransactionFacto
 import javax.annotation.processing.Generated;
 
 public class AtendimentoTest {
-    SalaoDBFactory dbFactory = new SalaoMapDBFactory();
-    AtendimentoDB atendimentoDB;
-    ProfissionalDB profissionalDB;
-    ServicoDB servicoDB;
+    protected SalaoDBFactory dbFactory = new SalaoMapDBFactory();
+    protected AtendimentoDB atendimentoDB;
+    protected ProfissionalDB profissionalDB;
+    protected ServicoDB servicoDB;
 
     public void setupAtendimentoMapDB() {
         ProfissionalTransaction p1 =
